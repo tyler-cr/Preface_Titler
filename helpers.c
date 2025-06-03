@@ -4,16 +4,16 @@ void parseFile();
 
 
 void printHelp(){
-    printf("Usage: ./pre [FLAG(S)]... [FILE(s)]... \n");
+    printf("Usage: ./pre [FLAG(S)]... [FILE(s)]... \n\n");
+    printf("Add a preface to FILE and overwrite it (by default)\n");
     printf("PLEASE put flags in front of file(s) IE: pre -r -o ~/exampledirectory ~/newexampledirectory\n");
-    printf("inserting flags may cause undefined behavior\n");
-    printf("\n");
-    printf("\n");
+    printf("inserting flags may cause undefined behavior\n\n");
+    printf("FLAGS\n");
     printf("\n");
 }
 
 void parseArg(char* arg){
-
+//
 }
 
 int runUnknown(char* arg){
