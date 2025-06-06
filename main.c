@@ -1,3 +1,5 @@
+//There is some irony of not having a preface for the main file of a project that is all about prefaces. So here you go
+
 #include <stdio.h>
 #include "helpers.c"
 
