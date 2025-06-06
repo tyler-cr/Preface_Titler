@@ -1,4 +1,12 @@
-//There is some irony of not having a preface for the main file of a project that is all about prefaces. So here you go
+/**
+ * Preface Titler: main.c
+ *
+ *
+ * The main file for the CLI tool
+ *
+ * @author Tyler Crimando
+ * @version .05
+*/
 
 #include <stdio.h>
 #include "helpers.c"
