@@ -1,7 +1,7 @@
 
 void parseFlag();
 void parseFile();
-
+const char* fileType(char* fileName);
 
 void printHelp(){
     printf("Usage: ./pre [FLAG(S)]... [FILE(s)]... \n\n");
@@ -13,6 +13,10 @@ void printHelp(){
 }
 
 void parseArg(char* arg){
+//
+}
+
+const char* fileType(char* fileName){
 //
 }
 
