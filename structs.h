@@ -1,3 +1,6 @@
+#ifndef STRUCTS_H
+#define STRUCTS_H
+
 typedef struct {
   const char* language;
   const char* fileExtension;
@@ -7,3 +10,5 @@ typedef struct {
 
 char* getSingleComment(char* langOrExtension);
 char* getMultiComment(char* langOrExtension);
+
+#endif
