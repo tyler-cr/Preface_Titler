@@ -40,13 +40,13 @@ void loadFileTypeList(char* fileName){
 }
 
 fileTypeDictElement createFileTypeDictElement(char language[16],char fileExtension[16],char singleComment[16],char leftMultiComment[16],char rightMultiComment[16]){
-  fileTypeDictElement newElement = malloc(sizeof(fileTypeDictElement));
+  fileTypeDictElement newElement;
 
-    newElement.language = language;
-    newElement.fileExtension = fileExtension;
-    newElement.singleComment = singleComment;
-    newElement.leftMultiComment = leftMultiComment;
-    newElement.rightMultiComment = rightMultiComment;
+  strcpy(newElement.language, language);
+  strcpy(newElement.fileExtension, fileExtension);
+  strcpy(newElement.singleComment, singleComment);
+  strcpy(newElement.leftMultiComment, leftMultiComment);
+  strcpy(newElement.rightMultiComment, rightMultiComment);
 
     return newElement;
 }
