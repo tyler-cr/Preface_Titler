@@ -1,0 +1,19 @@
+18
+C c // /* */
+C# cs // /* */
+C++ cpp // /* */
+Go go // /* */
+HTML html  <!-- -->
+Java java // /* */
+JavaScript js // /* */
+Kotlin kt // /* */
+Lua lua -- --[[ ]]
+PHP php // /* */
+Perl pl # =pod =cut
+Python py # """ """
+Ruby rb # =begin =end
+Rust rs // /* */
+SQL sql -- /* */
+Shell sh # # #
+Swift swift // /* */
+TypeScript ts // /* */
