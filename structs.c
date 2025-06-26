@@ -1,18 +1,50 @@
 #include "structs.h"
 
+int listSize;
+
+fileTypeDictElement *langList[listSize];
+
 void loadFileTypeList(char* fileName){
   FILE* typeFile = fopen(fileName, "r");
+  
+  if typeFile == NULL) {
+    printf("Error opening file\n");
+    return;
+  }
+
+  char line[256];
+
+  fgets(line, 256, typeFile);
+  sscanf(line, "%d", &listSize);
+
+  char* language;
+  char* fileExtension;
+  char* singleComment;
+  char* leftMultiComment;
+  char* rightMultiComment;
+
+  for (int i = 0; i < listSize; i++){
+    fgets(line, 256, typeFile);
+    sscanf(line, "%s %s %s %s %s", language, fileExtension, singleComment, leftMultiComment, rightMultiComment);
+
+    fileTypeDictElement newElement = createFileTypeDictElement(language,fileExtension,singleComment,leftMultiComment,rightMultiComment);
+
+    langList[i] = newElement;
+
+  }
+
 
   fclose(typeFile);
 }
 
-#define PLACEHOLDER 20
-fileTypeDictElement langList[PLACEHOLDER];
+fileTypeDictElement createFileTypeDictElement(char* language,char* fileExtension,char* singleComment,char* leftMultiComment,char* rightMultiComment){
+  //WIP
+}
 
 
 
 fileTypeDictElement* findLanguage(char* langOrExtension){
-  for (int i = 0; i < PLACEHOLDER; i++){
+  for (int i = 0; i < listSize; i++){
     if (strcmp(langList[i].language, langOrExtension) == 0 || 
         strcmp(langList[i].fileExtension, langOrExtension) == 0){
       return &langList[i];
