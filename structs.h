@@ -2,11 +2,11 @@
 #define STRUCTS_H
 
 typedef struct {
-  char* language;
-  char* fileExtension;
-  char* singleComment;
-  char* leftMultiComment;
-  char* rightMultiComment;
+  char language[16];
+  char fileExtension[16];
+  char singleComment[16];
+  char leftMultiComment[16];
+  char rightMultiComment[16];
 } fileTypeDictElement;
 
 char* getSingleComment(char* langOrExtension);
