@@ -2,32 +2,34 @@
 
 int listSize;
 
-fileTypeDictElement *langList[listSize];
+fileTypeDictElement langList[32]; // supports up to 32 languages. Probably don't need much more
 
 void loadFileTypeList(char* fileName){
   FILE* typeFile = fopen(fileName, "r");
   
-  if typeFile == NULL) {
+  if (typeFile == NULL) {
     printf("Error opening file\n");
     return;
   }
 
-  char line[256];
+  char line[128];
 
-  fgets(line, 256, typeFile);
+  fgets(line, 128, typeFile);
   sscanf(line, "%d", &listSize);
 
-  char* language;
-  char* fileExtension;
-  char* singleComment;
-  char* leftMultiComment;
-  char* rightMultiComment;
+  fileTypeDictElement loadedList[listSize];
+
+  char language[16];
+  char fileExtension[16];
+  char singleComment[16];
+  char leftMultiComment[16];
+  char rightMultiComment[16];
 
   for (int i = 0; i < listSize; i++){
     fgets(line, 256, typeFile);
     sscanf(line, "%s %s %s %s %s", language, fileExtension, singleComment, leftMultiComment, rightMultiComment);
 
-    fileTypeDictElement newElement = createFileTypeDictElement(language,fileExtension,singleComment,leftMultiComment,rightMultiComment);
+    fileTypeDictElement newElement = createFileTypeDictElement(language, fileExtension, singleComment, leftMultiComment, rightMultiComment);
 
     langList[i] = newElement;
 
