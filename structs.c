@@ -39,8 +39,16 @@ void loadFileTypeList(char* fileName){
   fclose(typeFile);
 }
 
-fileTypeDictElement createFileTypeDictElement(char* language,char* fileExtension,char* singleComment,char* leftMultiComment,char* rightMultiComment){
-  //WIP
+fileTypeDictElement createFileTypeDictElement(char language[16],char fileExtension[16],char singleComment[16],char leftMultiComment[16],char rightMultiComment[16]){
+  fileTypeDictElement newElement = malloc(sizeof(fileTypeDictElement));
+
+    newElement.language = language;
+    newElement.fileExtension = fileExtension;
+    newElement.singleComment = singleComment;
+    newElement.leftMultiComment = leftMultiComment;
+    newElement.rightMultiComment = rightMultiComment;
+
+    return newElement;
 }
 
 
@@ -60,7 +68,7 @@ char* getSingleComment(char* langOrExtension){
   if (language) return language->singleComment;
 
   return "Language or extension not found!\n Please check spelling "
-         "or list of languages currently supported in structs.c";
+         "or list of languages currently supported in languages.txt";
 }
 
 char* getLeftMultiComment(char* langOrExtension){
@@ -68,7 +76,7 @@ char* getLeftMultiComment(char* langOrExtension){
   if (language) return language->leftMultiComment;
 
   return "Language or extension not found!\n Please check spelling "
-         "or list of languages currently supported in structs.c";
+         "or list of languages currently supported in languages.txt";
 }
 
 char* getRightMultiComment(char* langOrExtension){
@@ -76,5 +84,5 @@ char* getRightMultiComment(char* langOrExtension){
   if (language) return language->rightMultiComment;
 
   return "Language or extension not found!\n Please check spelling "
-         "or list of languages currently supported in structs.c";
+         "or list of languages currently supported in languages.txt";
 }
