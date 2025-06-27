@@ -9,25 +9,19 @@
 */
 
 #include <stdio.h>
-#include "helpers.c"
+#include "src/parser.h"
+#include "src/structs.h"
 
 int main(int argc, char *argv[]) {
 
     if (argc == 1){
         printHelp();
+        return 1;
     }
 
 
 
 
-
-    else{
-        printf("WIP Plz 4giv :(\n");
-    }
-
-    printf("You passed %d arguments:\n", argc);
-    for (int i = 0; i < argc; i++) {
-        printf("arg[%d]: %s\n", i, argv[i]);
-    }
-    return 0;
+    printf("AHAHHAHAHA\n");
+    printf("%d\n", whatAmI(argv[1]));
 }
