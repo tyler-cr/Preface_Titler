@@ -20,4 +20,4 @@ WIP
 Please fork the repository and open a pull request to the `main` branch if you're interested in contributing!
 
 
-Made by Tyler Crimando :)
+Made by Tyler Crimando
