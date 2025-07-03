@@ -1,4 +1,7 @@
 #include "structs.h"
+#include <stdio.h>
+#include <string.h>
+
 
 int listSize;
 
@@ -26,7 +29,7 @@ void loadFileTypeList(char* fileName){
   char rightMultiComment[16];
 
   for (int i = 0; i < listSize; i++){
-    fgets(line, 256, typeFile);
+    fgets(line, 128, typeFile);
     sscanf(line, "%s %s %s %s %s", language, fileExtension, singleComment, leftMultiComment, rightMultiComment);
 
     fileTypeDictElement newElement = createFileTypeDictElement(language, fileExtension, singleComment, leftMultiComment, rightMultiComment);

@@ -1,0 +1,7 @@
+<command>       ::= pre <flags> <files> <directories> <flags> <files> <directory>
+<flags>         ::= <NULL> | <flag> | <flag> <flags>
+<flag>          ::= --<flagname> | -<flagname>
+<flagname>      ::= [SEE NAME OF APPROVED FLAGS IN "available_flags.txt"]
+<files>         ::= <NULL> | <file> | <file> <files>
+<file>          ::= [VALID FILE PATH]
+<directories>   ::= <NULL> | <directory> | <directory> <directories>

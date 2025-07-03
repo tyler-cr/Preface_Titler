@@ -11,8 +11,14 @@
 #include <stdio.h>
 #include "src/parser.h"
 #include "src/structs.h"
+#include "src/flags.h"
+
+//for testing
+#include "string.h"
 
 int main(int argc, char *argv[]) {
+
+    loadFileTypeList("languages.txt");
 
     if (argc == 1){
         printHelp();
@@ -20,8 +26,8 @@ int main(int argc, char *argv[]) {
     }
 
 
+    for (int i = 0; i < argc; i++){
+        parseArg(argv[i]);
+    }
 
-
-    printf("AHAHHAHAHA\n");
-    printf("%d\n", whatAmI(argv[1]));
 }

@@ -1,0 +1,2 @@
+-bnf or --bnf   :print out Backus-Naur Form of accepted cli syntax
+-h or --help    :print out help page

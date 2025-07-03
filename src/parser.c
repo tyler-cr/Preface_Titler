@@ -3,14 +3,13 @@
 #include <unistd.h>
 #include <stdio.h>
 #include "parser.h"
+#include "flags.h"
 
 void printHelp(){
     printf("Usage: ./pre [FLAG(S)]... [FILE(s)]... \n\n");
     printf("Add a preface to FILE and overwrite it (by default)\n");
-    printf("PLEASE put flags in front of file(s) IE: pre -r -o ~/exampledirectory ~/newexampledirectory\n");
-    printf("inserting flags afterwords may cause undefined behavior\n\n");
-    printf("FLAGS\n");
-    printf("\n");
+    printf("PLEASE follow BNF form for correct command formatting\n\n");
+    printf("Type \" ./pre -bnf \" for more info!\n");
 }
 
 int whatAmI(char* arg) {
