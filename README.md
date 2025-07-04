@@ -8,6 +8,7 @@ Headings in medium/large projects are vital, but they also eat away at time and 
  - Student
  - Hobbyist
  - Professional
+ - Anyone!
 
 ## Quick-start
 WIP
